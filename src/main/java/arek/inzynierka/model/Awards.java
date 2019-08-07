@@ -1,10 +1,13 @@
 package arek.inzynierka.model;
 
+import arek.inzynierka.user.Role;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -14,7 +17,7 @@ public class Awards {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+    @Column(name = "award_id")
     private long id;
 
     @Column(name = "name")

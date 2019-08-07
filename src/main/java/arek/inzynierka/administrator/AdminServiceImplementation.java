@@ -1,7 +1,7 @@
 package arek.inzynierka.administrator;
 
 
-import arek.inzynierka.user.User;
+import arek.inzynierka.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

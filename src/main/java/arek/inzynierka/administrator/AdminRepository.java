@@ -1,6 +1,6 @@
 package arek.inzynierka.administrator;
 
-import arek.inzynierka.user.User;
+import arek.inzynierka.model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

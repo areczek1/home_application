@@ -1,6 +1,6 @@
 package arek.inzynierka.administrator;
 
-import arek.inzynierka.user.User;
+import arek.inzynierka.model.User;
 import arek.inzynierka.user.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

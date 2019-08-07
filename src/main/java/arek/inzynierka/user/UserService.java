@@ -1,5 +1,7 @@
 package arek.inzynierka.user;
 
+import arek.inzynierka.model.User;
+
 public interface UserService {
 
     public User findUserByEmail(String email);//odnajduje uzytkownika po mailu

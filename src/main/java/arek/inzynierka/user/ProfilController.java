@@ -1,5 +1,6 @@
 package arek.inzynierka.user;
 
+import arek.inzynierka.model.User;
 import arek.inzynierka.utilities.UserUtilities;
 import arek.inzynierka.validators.ChangePasswordValidator;
 import arek.inzynierka.validators.EditUserProfileValidator;

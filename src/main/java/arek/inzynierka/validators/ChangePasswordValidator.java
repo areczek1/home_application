@@ -1,7 +1,7 @@
 package arek.inzynierka.validators;
 
 import arek.inzynierka.constans.ApplicationConstans;
-import arek.inzynierka.user.User;
+import arek.inzynierka.model.User;
 import arek.inzynierka.utilities.ApplicationUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;

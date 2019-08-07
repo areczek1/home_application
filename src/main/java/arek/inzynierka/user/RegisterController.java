@@ -1,6 +1,7 @@
 package arek.inzynierka.user;
 
 import arek.inzynierka.emailSender.EmailSender;
+import arek.inzynierka.model.User;
 import arek.inzynierka.utilities.ApplicationUtils;
 import arek.inzynierka.validators.UserRegisterValidator;
 

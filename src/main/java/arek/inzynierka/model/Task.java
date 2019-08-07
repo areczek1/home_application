@@ -6,6 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -15,7 +16,7 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
+    @Column(name = "task_id")
     private long id;
 
     @Column(name = "name")
@@ -42,7 +43,15 @@ public class Task {
     @NotNull
     private Date dueDate;
 
-    @Column(name = "id_user")
+    @Column(name = "create_date")
     @NotNull
-    private long idUser;
+    private LocalDateTime createDate;
+
+    @Column(name = "end_date")
+    @NotNull
+    private LocalDateTime endDate;
+
+    @Column(name = "confirm")
+    @NotNull
+    private boolean confirm;
 }
