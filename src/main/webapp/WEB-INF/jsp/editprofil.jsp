@@ -8,61 +8,66 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/editprofile.css" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/menuapp.css" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/modalalert.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title><s:message code="profilEdit.pageName"/></title>
 </head>
 <body>
-<body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <%@include file="/WEB-INF/incl/menu.app" %>
-
-<h2 align="center"><s:message code="profilEdit.pageName"/></h2>
-
-<sf:form id="usersForm" action="updateprofil" modelAttribute="user"
-		enctype="multipart/form-data" method="POST">
-
-		<sf:hidden path="id"/>
-
-		<table width="500" border="0" cellpadding="4" cellspacing="1"
-			align="center">
-
-			<tr>
-				<td width="130" align="right" ><s:message code="register.name"/></td>
-				<td width="270" align="left"><sf:input path="name"
-						size="28" id="name" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><font color="red"><sf:errors path="name"/></font></td>
-			</tr>
-
-			<tr>
-				<td width="130" align="right"><s:message code="register.lastName"/></td>
-				<td width="270" align="left"><sf:input path="lastName"
-						size="28" /></td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="center"><font color="red"><sf:errors path="lastName"/></font></td>
-			</tr>
-
-			<tr>
-				<td width="130" align="right" ><s:message code="register.email"/></td>
-				<td width="270" align="left"><sf:input path="email" size="28" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><font color="red"><sf:errors path="email"/></font></td>
-			</tr>
-
-			<tr>
-				<td colspan="2" align="center" bgcolor="#fff">
-					<input type="submit" value="<s:message code="button.save"/>" />
-					<input type="button" value="<s:message code="button.cancel"/>"
-						onclick="window.location.href='${pageContext.request.contextPath}/'"/>
-				</td>
-			</tr>
-
-		</table>
-
-	</sf:form>
-
+<script src="https://use.fontawesome.com/1dec14be15.js"></script>
+<div class="container-fluid stylish-form">
+    <div class="row mar20">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="inner-section">
+                <sf:form class="form" id="usersForm" action="updateprofil" modelAttribute="user"
+                         enctype="multipart/form-data" method="POST">
+                    <div class="mar20 inside-form">
+                        <h2 class="font_white text-center">Edycja profilu</h2>
+                        <ul>
+                            <li class="icon-holder dsp-flex">
+                                <i class="fa fa-facebook "></i>
+                            </li>
+                            <li class="icon-holder dsp-flex">
+                                <i class="fa fa-twitter "></i>
+                            </li>
+                            <li class="icon-holder dsp-flex">
+                                <i class="fa fa-instagram "></i>
+                            </li>
+                        </ul>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
+                            <sf:input path="name" name="name" id="name" type="text" size="28" class="form-control input-lg" placeholder="Imię..." />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
+                            <sf:input path="lastName" name="lastName" id="lastName" size="28" type="text" placeholder="Nazwisko..." class="form-control input-lg"/>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
+                            <sf:input path="email" name="email" id="email" size="28" type="email" class="form-control input-lg" placeholder="Email..."/>
+                        </div>
+                        <div class="footer text-center">
+                            <input type="button" class="btn btn-neutral btn-round btn-lg" value="<s:message code="button.zmianaHasla"/>"
+                            onclick="window.location.href='${pageContext.request.contextPath}/editpassword'"/>
+                        </div>
+                            <div class="passwordfooter text-center">
+                            <input type="submit" class="btn btn-neutral btn-round btn-lg left" value="<s:message code="button.save"/>" />
+                            <input type="button" class="btn btn-neutral btn-round btn-lg right" value="<s:message code="button.cancel"/>"
+                                   onclick="window.location.href='${pageContext.request.contextPath}/'"/>
+                        </div>
+                    </div>
+                </sf:form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

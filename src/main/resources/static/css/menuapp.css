@@ -1,0 +1,104 @@
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .cont {
+  padding: 60px 15px 0;
+}
+.cont .credit {
+  margin: 20px 0;
+}
+
+#navbar {
+  width: 100%;
+  top:-60px;
+}
+#navbar.affix-top{
+  position:fixed;
+  top: 0px;
+  -webkit-transition: all 0.8s ease;
+}
+
+#navbar.affix {
+  position:fixed;
+  top:0;
+  bottom:60;
+  -webkit-transition: all 1s ease;
+  background: #d4145a;
+      padding: 12px;
+      border: none;
+          z-index: 1;
+
+}
+#footer > .cont {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar .navbar-brand{
+margin-left:30% !important;
+display: flex; !important;
+align-items: center !important;
+}
+
+code {
+  font-size: 80%;
+}
+.collapse.navbar-collapse.holder li a {
+    color: white;
+    display: flex; !important;
+    align-items: center !important;
+}
+.collapse.navbar-collapse.holder li a:hover{
+
+}
+a.navbar-brand.holder {
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: white;
+}
+a.navbar-brand.holder:hover{
+font-weight: bold;
+color: white;
+font-size: 29px;
+}
+.collapse.navbar-collapse.holder li {
+    margin-left: 20px;
+}
+.glyphicon {
+    font-size: 23px;
+    padding-right:7px;
+    padding-bottom:4px;
+}
+.collapse.navbar-collapse.holder img{
+    width:32px;
+    height:30px;
+    padding-right:7px;
+    padding-bottom:4px;
+}
+.dropdown {
+  background-color: transparent;
+  border-color: #fff;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  transition: all 0.3s ease-out;
+}
+.dropdown-menu{
+  background-color: #000;
+}
+.dropdown-menu>li>a{
+  color: #fff;
+  text-align:center;
+}

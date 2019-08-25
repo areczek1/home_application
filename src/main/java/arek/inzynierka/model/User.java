@@ -21,7 +21,7 @@ public class User {
 
     @Column(name = "email")
     @NotNull
-    private String email;
+    private String email    ;
 
     @Column(name = "password")
     @NotNull
@@ -50,17 +50,20 @@ public class User {
     @NotNull
     private boolean admin;
 
-    @ManyToMany(cascade = CascadeType.ALL) //relacja wiele do wielu, kaskada All, zeby mozna bylo odczytywac role uzytkownikow
-    @JoinTable(name = "user_task", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))//tablica zbierajaca dane z dwoch tablic: jest to tablica user_role, ktora przechowuje id uzytkownika i role jaka pełni
-    private List<Task> taskList; //kolekcja
+    @Column(name = "path")
+    @NotNull
+    private String path;
+
 
     @ManyToMany(cascade = CascadeType.ALL) //relacja wiele do wielu, kaskada All, zeby mozna bylo odczytywac role uzytkownikow
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))//tablica zbierajaca dane z dwoch tablic: jest to tablica user_role, ktora przechowuje id uzytkownika i role jaka pełni
-    private Set<Role> roles; //kolekcja
+    private List<Role> roles; //kolekcja
+
+
 
     @ManyToMany(cascade = CascadeType.ALL) //relacja wiele do wielu, kaskada All, zeby mozna bylo odczytywac role uzytkownikow
-    @JoinTable(name = "awards_user", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "award_id"))//tablica zbierajaca dane z dwoch tablic: jest to tablica user_role, ktora przechowuje id uzytkownika i role jaka pełni
-    private List<User> users; //kolekcja
+    @JoinTable(name = "group_user", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "group_id"))//tablica zbierajaca dane z dwoch tablic: jest to tablica user_role, ktora przechowuje id uzytkownika i role jaka pełni
+    private List<Group> groups; //kolekcja
 
     @Transient//Hibernate olewa tą składową
     private String operacja;
@@ -70,5 +73,9 @@ public class User {
 
     @Transient//Hibernate olewa tą składową
     private String newPassword;
+
+    @Transient//Hibernate olewa tą składową
+    private int nrTaska;
+
 
 }

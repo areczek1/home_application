@@ -6,7 +6,7 @@ body, html {
 
 .card-container.card {
     max-width: 350px;
-    padding: 40px 40px;
+    padding: 60px 40px;
 }
 
 .btn {
@@ -26,7 +26,7 @@ body, html {
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
-    margin-top: 50px;
+    margin-top: 150px;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -37,13 +37,10 @@ body, html {
 }
 
 .profile-img-card {
-    width: 96px;
-    height: 96px;
+    width: 155px;
+    height: 110px;
     margin: 0 auto 10px;
     display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
 }
 
 /*
@@ -92,7 +89,6 @@ body, html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .form-signin .form-control:focus {
     border-color: rgb(104, 145, 162);
     outline: 0;
@@ -132,4 +128,25 @@ body, html {
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
+}
+
+/* Górny panel menu*/
+div.wrapper {
+    width: 100%;
+    display: table;
+}
+div.currency {
+    text-align:center;
+    display: table-cell;
+    vertical-align: middle;
+}
+div.wrapper2 {
+    width: 100%;
+    display: table;
+}
+div.currency2 {
+    text-align:center;
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottm:10px;
 }

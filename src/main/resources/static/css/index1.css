@@ -1,0 +1,148 @@
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+.nav-stacked > li + li {
+    margin-top: 0px;
+}
+.nav-tabs > li > a {
+    padding: 79.5px 100px 79.5px 100px !important;
+    color: #FFFFFF;
+    background-color: cornflowerblue;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0;
+    font-size:16px;
+    font-weight: bold;
+
+}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    background-color: #448AFF;
+    color: #FFFFFF;
+    transition: all 0.5s ease 0s;
+}
+.nav-tabs > li.active > a {
+    color: #FFFFFF;
+    background-color: #2962FF;
+
+}
+.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #FFFFFF;
+    background-color: #2962FF;
+    transition: all 0.5s ease 0s;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 1px;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease 0s;
+
+}
+.btn-primary {
+    background-color: #2962FF;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0D47A1;
+}
+.container
+{
+    margin-top:200px;
+    margin-right:auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+
+}
+body{
+    background-color: transparent;
+    height:100%;
+}
+.margin {
+    margin-left:15px !important;
+    margin-right:15px !important;
+}
+.no-gutter {
+    padding-right: 0 !important;
+}
+.pull-bottom
+{
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+}
+.container{
+    box-sizing: border-box;
+}
+html,.container {
+    height:76%;
+}
+.row
+{
+    height: 100%;
+}
+.padding
+{
+    padding-left:35px !important;
+}
+.tabimage
+{
+    width:90%;
+    height:90%;
+}
+.h3modification
+{
+    display: inline;
+    margin-top:10px;
+}
+.task
+{
+    background-color: darkblue;
+}
+.task span {
+    font-size: 22px;
+    color:white;
+    margin-left:17px;
+    margin-top:22px;
+    margin-bottom:15px;
+    display:inline-block;
+}
+.pull-bottom
+{
+    position: absolute;
+    bottom:15px;
+    right:20px;
+}
+#parent li a.pierwszy
+{
+    padding-left:40px;
+    background-image: url(../images/do_wykonania.png);
+    background-repeat: no-repeat;
+    background-position: 30px 55px;
+}
+#parent li a.drugi
+{
+    padding-left:40px;
+    background-image: url(../images/w_trakcie.png);
+    background-repeat: no-repeat;
+    background-position: 30px 55px;
+}
+#parent li a.trzeci
+{
+    padding-left:40px;
+    background-image: url(../images/wykonane.png);
+    background-repeat: no-repeat;
+    background-position: 30px 55px;
+}

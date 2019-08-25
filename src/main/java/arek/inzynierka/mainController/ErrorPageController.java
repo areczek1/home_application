@@ -10,13 +10,13 @@ import javax.ws.rs.GET;
 public class ErrorPageController implements ErrorController {
 
     @Override
-    public String getErrorPath(){
+    public String getErrorPath() {
         return "/error";
     }
 
     @GET
     @RequestMapping(value = "/error")
-    public String showErrorPage(){
+    public String showErrorPage() {
         return "error";
     }
 }

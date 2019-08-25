@@ -1,0 +1,22 @@
+.popupunder{
+    width: 700px;
+    height:110px;
+    position:fixed;
+    top: 85px;
+    font-size:18px;
+    right: 600px;
+    z-index: 10;
+    border: 0;
+    padding: 20px;
+}
+.popupunder.alert-success{
+    border: 3px solid #198b49;
+    background:#27AE60;
+    color:#fff;
+}
+.popupunder .close{
+    font-size: 10px;
+    position:absolute !important;
+    right: 2px;
+    top: 3px;
+}

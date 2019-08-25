@@ -7,10 +7,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/menuapp.css" />
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="error.errorPage"/></title>
 </head>
 <body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <%@include file="/WEB-INF/incl/menu.app" %>
 
 <img src="/resources/images/error.jpg">

@@ -21,14 +21,11 @@ public class Awards {
     private long id;
 
     @Column(name = "name")
-    @NotNull
     private String name;
 
     @Column(name = "count")
-    @NotNull
     private int count;
 
     @Column(name = "path")
-    @NotNull
     private String path;
 }
