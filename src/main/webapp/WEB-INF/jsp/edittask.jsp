@@ -44,30 +44,30 @@
                     <h2 class="font_white text-center h2form">Edycja zadania</h2>
                     <ul class="ulform">
                         <li class="icon-holder dsp-flex">
-                            <i class="fa fa-facebook "></i>
+                            <i class="fa fa-mouse-pointer fa-3x" style="color:black; margin-left:5px;"></i>
                         </li>
                         <li class="icon-holder dsp-flex">
-                            <i class="fa fa-twitter "></i>
+                            <i class="fa fa-pencil fa-3x" style="color:black"></i>
                         </li>
-                        <li class="icon-holder dsp-flex">
-                            <i class="fa fa-instagram "></i>
+                        <li class="icon-holder dsp-flex" style="color:black">
+                            <i class="fa fa-thumbs-up fa-3x"></i>
                         </li>
                     </ul>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                        <sf:input type="text" name="name" path="name" id="name" size="28" class="form-control input-lg" placeholder="Nazwa zadania..." />
+                        <sf:input type="text" name="name" path="name" id="name" size="40" class="form-control " placeholder="Nazwa zadania..." minLength="3" pattern=".{3,}" required="required"/>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                        <sf:input type="text" name="description" path="description" id="description" size="28" class="form-control input-lg" placeholder="Opis zadania.."/>
+                        <sf:input type="text" name="description" path="description" id="description" size="40" class="form-control " placeholder="Opis zadania.." minLength="5" pattern=".{5,}" required="required"/>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                        <sf:input  type="text" name="comment" path="comment" id="comment" size="28" class="form-control input-lg" placeholder="Ilość punktów.."/>
+                        <sf:input  type="text" name="comment" path="comment" id="comment" size="40" class="form-control " placeholder="Uwagi do zadania.." minLength="5" pattern=".{5,}" required="required"/>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                        <sf:input  type="number" name="countYang" path="countYang" id="countYang" size="28" class="form-control input-lg"  placeholder="Uwagi do zadania.."/>
+                        <sf:input  type="number" name="countYang" path="countYang" id="countYang" size="3" class="form-control "  placeholder="Ilość punktów.." mini="0" required="required"/>
                     </div>
                     <div class='input-group date' id='datetimepicker1'>
                                 <span class="input-group-addon">

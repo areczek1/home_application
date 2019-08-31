@@ -35,13 +35,13 @@
 						<h2 class="font_white text-center">Zmiana hasła</h2>
 						<ul>
 							<li class="icon-holder dsp-flex">
-								<i class="fa fa-facebook "></i>
+								<i class="fa fa-key fa-3x" style="color:black"></i>
 							</li>
 							<li class="icon-holder dsp-flex">
-								<i class="fa fa-twitter "></i>
+								<i class="fa fa-unlock-alt fa-3x" style="color:black"></i>
 							</li>
-							<li class="icon-holder dsp-flex">
-								<i class="fa fa-instagram "></i>
+							<li class="icon-holder dsp-flex" style="color:black">
+								<i class="fa fa-lock fa-3x"></i>
 							</li>
 						</ul>
 						<div class="input-group">

@@ -58,19 +58,19 @@
         // locale
         isRTL: false,
         firstDay: 0,
-        monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
-        monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-        dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-        dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+        monthNames: ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'],
+        monthNamesShort: ['Sty','Luty','Marz','Kwie','Maj','Czer','Lip','Sie','Wrz','Paź','Lis','Gru'],
+        dayNames: ['Niedziela','Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota'],
+        dayNamesShort: ['Nied','Pon','Wto','Śro','Czw','Pią','Sob'],
         buttonText: {
             prev: "<span class='fc-text-arrow'>‹</span>",
             next: "<span class='fc-text-arrow'>›</span>",
             prevYear: "<span class='fc-text-arrow'>«</span>",
             nextYear: "<span class='fc-text-arrow'>»</span>",
-            today: 'today',
-            month: 'month',
-            week: 'week',
-            day: 'day'
+            today: 'dzisiaj',
+            month: 'miesiąc',
+            week: 'tydzień',
+            day: 'dzień'
         },
 
         // jquery-ui theming
@@ -1595,8 +1595,8 @@
         ss	: function(d)	{ return zeroPad(d.getSeconds()) },
         m	: function(d)	{ return d.getMinutes() },
         mm	: function(d)	{ return zeroPad(d.getMinutes()) },
-        h	: function(d)	{ return d.getHours() % 12 || 12 },
-        hh	: function(d)	{ return zeroPad(d.getHours() % 12 || 12) },
+        h	: function(d)	{ return d.getHours() },
+        hh	: function(d)	{ return zeroPad(d.getHours()) },
         H	: function(d)	{ return d.getHours() },
         HH	: function(d)	{ return zeroPad(d.getHours()) },
         d	: function(d)	{ return d.getDate() },
@@ -1609,10 +1609,10 @@
         MMMM: function(d,o)	{ return o.monthNames[d.getMonth()] },
         yy	: function(d)	{ return (d.getFullYear()+'').substring(2) },
         yyyy: function(d)	{ return d.getFullYear() },
-        t	: function(d)	{ return d.getHours() < 12 ? 'a' : 'p' },
-        tt	: function(d)	{ return d.getHours() < 12 ? 'am' : 'pm' },
-        T	: function(d)	{ return d.getHours() < 12 ? 'A' : 'P' },
-        TT	: function(d)	{ return d.getHours() < 12 ? 'AM' : 'PM' },
+        t	: function(d)	{ return d.getHours() < 12 ? ' ' : ' ' },
+        tt	: function(d)	{ return d.getHours() < 12 ? ' ' : ' ' },
+        T	: function(d)	{ return d.getHours() < 12 ? ' ' : ' ' },
+        TT	: function(d)	{ return d.getHours() < 12 ? ' ' : ' ' },
         u	: function(d)	{ return formatDate(d, "yyyy-MM-dd'T'HH:mm:ss'Z'") },
         S	: function(d)	{
             var date = d.getDate();

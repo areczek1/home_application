@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/resources/css/menuapp.css" />
     <link rel="stylesheet" type="text/css" href="/resources/css/searchmembers.css" />
@@ -57,13 +57,13 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Użytkownicy</h3>
                 <div class="pull-right">
-                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-search"></span> Wyszukaj</button>
                 </div>
             </div>
             <table class="table">
                 <thead>
                 <tr class="filters">
-                    <th></th>
+                    <th style="text-align: center;">Dodaj</th>
                     <th><input type="text" class="form-control" placeholder="Id" disabled></th>
                     <th><input type="text" class="form-control" placeholder="Imię" disabled></th>
                     <th><input type="text" class="form-control" placeholder="Nazwisko" disabled></th>
@@ -73,22 +73,10 @@
                 <tbody>
                 <c:forEach var="u" items="${userList }">
                     <tr>
-                        <td>
-                            <table style="border-collapse: collapse; border: none;">
-                            <tbody>
-                            <tr style="border-collapse: collapse; border: none;">
-                                <td style="border-collapse: collapse; border: none;">
+
+                                <td>
                                     <a href="/addmember/${u.id }" ><input type="image" src="/resources/images/icon_plus.png" data-toggle="modal" data-target="#myModal" style="margin-left:25px;width:40px; height:auto;"/></a>
                                 </td>
-                            </tr>
-                                <tr style="border-collapse: collapse; border: none;">
-                                    <td style="border-collapse: collapse; border: none;">
-                                    <label>Dodaj członka</label>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            </table>
-                        </td>
                         <td class="hidden-xs"><c:out value="${u.id }" /></a></td>
                         <td><c:out value="${u.name }"/></a></td>
                         <td><c:out value="${u.lastName }"/></a></td>

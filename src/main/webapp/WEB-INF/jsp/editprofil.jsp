@@ -16,6 +16,15 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/modalalert.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title><s:message code="profilEdit.pageName"/></title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css'>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
 </head>
 <body>
 <script src="https://code.jquery.com/jquery.js"></script>
@@ -33,27 +42,64 @@
                         <h2 class="font_white text-center">Edycja profilu</h2>
                         <ul>
                             <li class="icon-holder dsp-flex">
-                                <i class="fa fa-facebook "></i>
+                                <i class="fa fa-pencil-square-o fa-3x"></i>
                             </li>
                             <li class="icon-holder dsp-flex">
-                                <i class="fa fa-twitter "></i>
+                                <i class="fa fa-lock fa-3x"></i>
                             </li>
                             <li class="icon-holder dsp-flex">
-                                <i class="fa fa-instagram "></i>
+                                <i class="fa fa-file-image-o fa-3x"></i>
                             </li>
                         </ul>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <sf:input path="name" name="name" id="name" type="text" size="28" class="form-control input-lg" placeholder="Imię..." />
+                            <sf:input path="name" name="name" id="name" type="text" size="28" class="form-control" placeholder="Imię..."  minLength="3" required="required"/>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <sf:input path="lastName" name="lastName" id="lastName" size="28" type="text" placeholder="Nazwisko..." class="form-control input-lg"/>
+                            <sf:input path="lastName" name="lastName" id="lastName" size="28" type="text" placeholder="Nazwisko..." class="form-control" minLength="3" required="required"/>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
-                            <sf:input path="email" name="email" id="email" size="28" type="email" class="form-control input-lg" placeholder="Email..."/>
+                            <sf:input path="email" name="email" id="email" size="28" type="email" class="form-control" placeholder="Email..." required="required"/>
                         </div>
+                        <div class="input-group input-group-select">
+                            <span class="ikona">Zmień awatara: </span>
+                                <select id="id_select2_example" data-minimum-results-for-search="Infinity" class="form-control" path="path" name="path" style="width: 180px;">
+                                    <option value="/resources/images/avatars/boy_1.png"data-img_src="/resources/images/avatars/boy_1.png"></option>
+                                    <option value="/resources/images/avatars/girl_1.png"data-img_src="/resources/images/avatars/girl_1/png"></option>
+                                    <option value="/resources/images/avatars/boy_2.png"data-img_src="/resources/images/avatars/boy_2.png"></option>
+                                    <option value="/resources/images/avatars/girl_2.png"data-img_src="/resources/images/avatars/girl_2.png"></option>
+                                    <option value="/resources/images/avatars/boy_3.png"data-img_src="/resources/images/avatars/boy_3.png"></option>
+                                    <option value="/resources/images/avatars/girl_3.png"data-img_src="/resources/images/avatars/girl_3.png"></option>
+                                    <option value="/resources/images/avatars/boy_4.png"data-img_src="/resources/images/avatars/boy_4.png"></optitars/girl_1.png"></option>on>
+                                    <option value="/resources/images/avatars/girl_4.png"data-img_src="/resources/images/avatars/girl_4.png"></option>
+                                    <option value="/resources/images/avatars/boy_5.png"data-img_src="/resources/images/avatars/boy_5.png"></option>
+                                    <option value="/resources/images/avatars/girl_5.png"data-img_src="/resources/images/avatars/girl_5.png"></option>
+                                    <option value="/resources/images/avatars/boy_6.png"data-img_src="/resources/images/avatars/boy_6.png"></option>
+                                </select>
+                        </div>
+                        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js'></script>
+                        <script id="rendered-js">
+                            function custom_template(obj) {
+                                var data = $(obj.element).data();
+                                var text = $(obj.element).text();
+                                if (data && data['img_src']) {
+                                    img_src = data['img_src'];
+                                    template = $("<div><img src=\"" + img_src + "\" style=\"margin-left:30px;margin-top:5px;width:90px;height:90px;\"/><p style=\"color:black; font-weight: 400;font-size:12pt;text-align:center;\">" + text + "</p></div>");
+                                    return template;
+                                }
+                            }
+                            var options = {
+                                'templateSelection': custom_template,
+                                'templateResult': custom_template };
+
+                            $('#id_select2_example').select2(options);
+                            $('.select2-container--default .select2-selection--single').css({ 'height': '120px','margin-bottom':'10px', 'background-color' : '#324571' });
+                            //# sourceURL=pen.js
+                        </script>
                         <div class="footer text-center">
                             <input type="button" class="btn btn-neutral btn-round btn-lg" value="<s:message code="button.zmianaHasla"/>"
                             onclick="window.location.href='${pageContext.request.contextPath}/editpassword'"/>

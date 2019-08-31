@@ -24,10 +24,11 @@
 <div class="container" style=" background: url(resources/images/profil_bg.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
 	<div class="row login_box">
 	    <div class="col-md-12 col-xs-12" align="center">
-            <div class="outter"><img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="image-circle"/></div>
+            <div style="margin-top:10px" class="outter"><img style="margin-top:30px" src="<c:out value="${user.path}"/>"/></div>
             <h2><c:out value="${user.name }"/> <c:out value="${user.lastName }"/></h2>
-            <h3><c:out value="${user.email }"/><h3>
+            <h3><c:out value="${user.email }"/></h3>
 	    </div>
+
         <div class="col-md-6 col-xs-6 follow line" align="center">
             <h4>
                  <s:message code="profil.czyAktywny"/>

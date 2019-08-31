@@ -163,7 +163,7 @@ $(window).load(function(){
                     <sec:authorize access="hasRole('ROLE_PARENT')">
                     <li><button type="button" class="btn btn-default" onclick="add()">Dodaj</button></li>
                     <li><button type="button" class="btn btn-default" onclick="done()">Akceptuj</button></li>
-                    <li><button type="button" class="btn btn-default" data-toggle="modal" onclick="">Edytuj</button></li>
+                    <li><button type="button" class="btn btn-default" data-toggle="modal" onclick="editTask()">Edytuj</button></li>
                     <li><button type="button" class="btn btn-primary " onclick="delete_task()">Usuń</button></li>
                     </sec:authorize>
                 </ul>
@@ -172,7 +172,7 @@ $(window).load(function(){
                 <ul class="list-inline pull-right">
                     <sec:authorize access="hasRole('ROLE_PARENT')">
                     <li><button type="button" class="btn btn-default" onclick="add()">Dodaj</button></li>
-                    <li><button type="button" class="btn btn-default" data-toggle="modal" onclick="">Edytuj</button></li>
+                    <li><button type="button" class="btn btn-default" data-toggle="modal" onclick="editTask()">Edytuj</button></li>
                     <li><button type="button" class="btn btn-primary " onclick="delete_task()">Usuń</button></li>
                     </sec:authorize>
                 </ul>

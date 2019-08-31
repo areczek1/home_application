@@ -19,10 +19,8 @@ td.fc-today {
 }
 .fc-event-inner {
     font-family: 'Open Sans', sans-serif;
-    background: #03a9f3 !important;
-    color: #fff !important;
     font-size: 12px !important;
-    font-weight: 400 !important;
+    font-weight: 600 !important;
     padding: 5px 4px !important;
 }
 
@@ -301,16 +299,16 @@ span.fc-button {
     cursor: default;
 }
 .fc-event.chill {
-    background-color: #f3dcf8;
+    background-color: #BFAE15;
 }
 .fc-event.info {
-    background-color: #c6ebfe;
+    background-color: #035985;
 }
 .fc-event.important {
     background-color: #ffbebe;
 }
 .fc-event.success {
-    background-color: #beffbf;
+    background-color: #1A9107;
 }
 .fc-event:hover {
     opacity: 0.7;
@@ -692,8 +690,8 @@ table.fc-header {
     margin-top:200px;
 }
 .fc-event {
-    background: #fff !important;
-    color: #000 !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 
 /* for vertical events */

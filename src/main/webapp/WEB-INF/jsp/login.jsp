@@ -30,7 +30,13 @@
             <form class="form-signin" action="/login" method="POST">
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Adres email" required autofocus>
+
                 <input type="password" id="password" name ="password" class="form-control" placeholder="Hasło" required>
+                <span style="text-align:center; display: inline-block;">
+                <c:if test="${not empty param.error}">
+                    <font color="red"><s:message code="error.logowanie"/></font>
+                </c:if>
+                </span>
                 <div id="remember" class="checkbox">
                     <input type="checkbox" tabindex="3" value="rememberme" id="rememberme">Zapamiętaj mnie
                 </div>

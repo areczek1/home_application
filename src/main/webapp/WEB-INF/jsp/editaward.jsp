@@ -20,11 +20,6 @@
     <script>
         window.console = window.console || function(t) {};
 
-        function add(id)
-        {
-            var awardLink= '${paContext.request.contextPath}/updateaward/'+id;
-            window.location.href=awardLink;
-        }
     </script>
     <script>
         if (document.location.search.match(/type=embed/gi)) {
@@ -47,26 +42,26 @@
 
                 <ul>
                     <li class="icon-holder dsp-flex">
-                        <i class="fa fa-facebook "></i>
+                        <i class="fa fa-futbol-o fa-3x" style="color:black;"></i>
                     </li>
                     <li class="icon-holder dsp-flex">
-                        <i class="fa fa-twitter "></i>
+                        <i class="fa fa-paint-brush fa-3x" style="color:black"></i>
                     </li>
-                    <li class="icon-holder dsp-flex">
-                        <i class="fa fa-instagram "></i>
+                    <li class="icon-holder dsp-flex" >
+                        <i class="fa fa-plane fa-3x" style="color:black;"></i>
                     </li>
                 </ul>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <sf:input type="text" name="name" path="name" id="name" size="28" class="form-control input-lg" placeholder="Nazwa nagrody..." />
+                            <sf:input type="text" name="name" path="name" id="name" size="40" class="form-control input-lg" placeholder="Nazwa nagrody..." minLength="3" required="required"/>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <sf:input type="number" name="count" path="count" id="count" size="28" class="form-control input-lg" placeholder="Liczba punktów.."/>
+                            <sf:input type="number" name="count" path="count" id="count" size="28" class="form-control input-lg" placeholder="Liczba punktów.." min="0" required="required"/>
                         </div>
                         <div class="input-group-select">
                             <span class="ikona">Edytuj ikonę: </span>
-                            <select id="id_select2_example" path="path" name="path" style="width: 180px; margin-left:auto; margin-right:auto">
+                            <select id="id_select2_example" data-minimum-results-for-search="Infinity" path="path" name="path" style="width: 180px; margin-left:auto; margin-right:auto">
                                 <option value="/resources/images/awards/bilety.png"data-img_src="/resources/images/awards/bilety.png">Bilety</option>
                                 <option value="/resources/images/awards/burger.png"data-img_src="/resources/images/awards/burger.png">Burgery</option>
                                 <option value="/resources/images/awards/cyrk.png"data-img_src="/resources/images/awards/cyrk.png">Rozrywka</option>
@@ -85,7 +80,7 @@
                                     var text = $(obj.element).text();
                                     if (data && data['img_src']) {
                                         img_src = data['img_src'];
-                                        template = $("<div><img src=\"" + img_src + "\" style=\"margin-left:35px;margin-top:5px;width:85px;height:85px;\"/><p style=\"color:black; font-weight: 400;font-size:12pt;text-align:center;\">" + text + "</p></div>");
+                                        template = $("<div><img src=\"" + img_src + "\" style=\"margin-left:35px;margin-top:5px;width:85px;height:85px;\"/><p style=\"color:white; font-weight: 600;font-size:12pt;text-align:center;\">" + text + "</p></div>");
                                         return template;
                                     }
                                 }
@@ -94,15 +89,12 @@
                                     'templateResult': custom_template };
 
                                 $('#id_select2_example').select2(options);
-                                $('.select2-container--default .select2-selection--single').css({ 'height': '120px' });
+                                $('.select2-container--default .select2-selection--single').css({ 'height': '120px', 'background-color' : '#428a47' });
                                 //# sourceURL=pen.js
                             </script>
                         </div>
                     <div class="footer text-center">
-                        <input type="submit" class="btn btn-neutral btn-round btn-lg left" value="<s:message code="button.save"/>" />
-
-                        <li><button type="button" class="btn btn-default" onclick="add(${awards.id})">Dodaj</button></li>
-
+                        <input type="submit" class="btn btn-neutral btn-round btn-lg left"  value="<s:message code="button.save"/>" />
                         <input type="button" class="btn btn-neutral btn-round btn-lg right" value="<s:message code="button.cancel"/>"
                                onclick="window.location.href='${pageContext.request.contextPath}/'"/>
                     </div>

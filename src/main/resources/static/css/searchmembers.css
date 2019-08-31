@@ -4,6 +4,7 @@
 .filterable .panel-heading .pull-right {
     margin-top: -20px;
 }
+
 .filterable .filters input[disabled] {
     background-color: transparent;
     border: none;
@@ -24,4 +25,8 @@
 .container
 {
     margin-top:100px;
+}
+.panel-primary .panel > .panel-heading {
+    background-color: green;
+
 }

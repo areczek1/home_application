@@ -50,7 +50,6 @@
                         <table class="table table-striped table-bordered table-list">
                             <thead>
                             <tr>
-                                <th><em class="fa fa-cog"></em></th>
                                 <th class="hidden-xs">Id</th>
                                 <th>Ikona</th>
                                 <th>Wybrana przez</th>

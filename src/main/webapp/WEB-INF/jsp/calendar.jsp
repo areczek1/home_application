@@ -29,29 +29,43 @@
             var d = date.getDate(),
                 m = date.getMonth(),
                 y = date.getFullYear();
-            var evts = []; // variable for events
-            var evts_done = []; // variable for events
+            var evts = []; // variable for events// variable for events
 //this is the part  where i tested to create a json format
+            <c:forEach items="${taskToDo}" var="taskToDo">
+
+            evts.push({
+                title: "${taskToDo.name}",
+                start: new Date("${taskToDo.year}", "${taskToDo.month}", "${taskToDo.day}","${taskToDo.hour}","${taskToDo.minute}"),
+                end: new Date("${taskToDo.year}", "${taskToDo.month}", "${taskToDo.day}","${taskToDo.hour}","${taskToDo.minute}"),
+                allDay: false,
+                className: 'info'
+            });
+
+            </c:forEach>
             <c:forEach items="${taskInProgress}" var="taskInProgres">
 
             evts.push({
                 title: "${taskInProgres.name}",
-                start: new Date("${taskInProgres.year}", "${taskInProgres.month}", "${taskInProgres.day}"),
-                backgroundColor: '#f56954',
-                borderColor: '#f56954'
+                start: new Date("${taskInProgres.year}", "${taskInProgres.month}", "${taskInProgres.day}","${taskInProgres.hour}","${taskInProgres.minute}"),
+                end: new Date("${taskInProgres.year}", "${taskInProgres.month}", "${taskInProgres.day}","${taskInProgres.hour}","${taskInProgres.minute}"),
+                allDay: false,
+                className: 'chill'
             });
 
             </c:forEach>
+
             <c:forEach items="${taskDone}" var="taskDone">
 
-            evts_done.push({
+            evts.push({
                 title: "${taskDone.name}",
-                start: new Date("${taskDone.year}", "${taskDone.month}", "${taskDone.day}"),
-                backgroundColor: '#f56954',
-                borderColor: '#f56954'
+                start: new Date("${taskDone.year}", "${taskDone.month}", "${taskDone.day}","${taskDone.hour}","${taskDone.minute}"),
+                end: new Date("${taskDone.year}", "${taskDone.month}", "${taskDone.day}","${taskDone.hour}","${taskDone.minute}"),
+                allDay: false,
+                className: 'success'
             });
 
             </c:forEach>
+
 
 
             /*  className colors
@@ -145,7 +159,7 @@
             text-align: center;
             font-size: 14px;
             font-family: "Open Sans", sans-serif;
-            background: url(http://www.digiphotohub.com/wp-content/uploads/2015/09/bigstock-Abstract-Blurred-Background-Of-92820527.jpg);
+            background: url(/resources/images/calendar_background.png) no-repeat center center fixed;
         }
 
         #wrap {

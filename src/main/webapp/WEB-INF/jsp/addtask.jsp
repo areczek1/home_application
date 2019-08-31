@@ -26,45 +26,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 <%@include file="/WEB-INF/incl/menu.app" %>
 <script src="https://use.fontawesome.com/1dec14be15.js"></script>
-<script type="text/javascript">
-    var showErrorSuccess = function(element, status) {
-        if (status === false) {
-            element.parent().next().removeClass('hidden').parent().addClass('has-error');
-            return false;
-        }
-        element.parent().next().addClass('hidden').parent().removeClass('has-error').addClass('has-success');
-    };
 
-    var validate = function() {
-        event.preventDefault();
-        //validate name
-        var name = $('#name').val();
-        if (name.length < 3) {
-            return showErrorSuccess($('#name'), false);
-        }
-        showErrorSuccess($('#name'));
-
-        var description = $('#description').val();
-        if (description.length < 8) {
-            return showErrorSuccess($('#description'), false);
-        }
-        showErrorSuccess($('#description'));
-
-        var comment = $('#comment').val();
-        if (comment.length < 8) {
-            return showErrorSuccess($('#comment'), false);
-        }
-        showErrorSuccess($('#comment'));
-
-        var countYang = $('#countYang').val(),
-            intRegex = /[0-9]+$/;
-        if (!intRegex.test(countYang)) {
-            return showErrorSuccess($('#countYang'), false);
-        }
-        showErrorSuccess($('#countYang'));
-
-    };
-</script>
 <script type="text/javascript">
 
     $(window).load(function(){
@@ -84,49 +46,43 @@
             <div class="inner-section">
                 <div class="mar20 form">
                 <sf:form class="form-signin" action="addnewtask" role="form" modelAttribute="task" enctype="multipart/form-data" method="POST">
-                        <h2 class="font_white text-center h2form">Dodawanie zadanie</h2>
+                        <h2 class="font_white text-center h2form">Dodawanie zadania</h2>
                         <ul class="ulform">
                             <li class="icon-holder dsp-flex">
-                                <i class="fa fa-facebook "></i>
+                                <i class="fa fa-list fa-3x" style="color:black"></i>
                             </li>
                             <li class="icon-holder dsp-flex">
-                                <i class="fa fa-twitter "></i>
+                                <i class="fa fa-sign-language fa-3x" style="color:black"></i>
                             </li>
-                            <li class="icon-holder dsp-flex">
-                                <i class="fa fa-instagram "></i>
+                            <li class="icon-holder dsp-flex" style="color:black">
+                                <i class="fa fa-desktop fa-3x"></i>
                             </li>
                         </ul>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <input type="text" class="form-control" name="name" path="name" id="name" placeholder="Nazwa zadania.." required>
-
+                            <input type="text" class="form-control" name="name" path="name" id="name" placeholder="Nazwa zadania.." pattern=".{3,}" required title="Wprowadź co najmniej 3 znaki">
                         </div>
-                    <p class="help-block hidden">Wpisz co najmniej 5 liter</p>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <input type="text" class="form-control" name="description" path="description" id="description" placeholder="Opis zadania.." required>
+                            <input type="text" class="form-control" name="description" path="description" id="description" placeholder="Opis zadania.." pattern=".{5,}" required title="Wprowadź co najmniej 5 znaków">
 
                         </div>
-                    <p class="help-block hidden">Wpisz co najmniej 8 liter</p>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <input type="number" min="0" class="form-control" name="countYang" path="countYang" id="countYang" required="required" placeholder="Ilość punktów.."required>
+                            <input type="number" min="0" class="form-control" name="countYang" path="countYang" id="countYang" required="required" placeholder="Ilość punktów.." required>
 
                         </div>
-                    <p class="help-block hidden">Wpisz dodatnią liczbę</p>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <input type="text" class="form-control" name="comment" path="comment" id="comment" placeholder="Uwagi do zadania.." required>
+                            <input type="text" class="form-control" name="comment" path="comment" id="comment" placeholder="Uwagi do zadania.." pattern=".{8,}" required title="Wprowadź co najmniej 8 znaków">
 
                         </div>
-                    <p class="help-block hidden">Wpisz co najmniej 8 liter</p>
                     <div class='input-group date' id='datetimepicker1'>
                                 <span class="input-group-addon">
                                     <i class="fa fa-calendar "></i>
                                 </span>
-                        <input type="text" path="dueDateText" name="dueDateText" class="form-control" placeholder="Dodaj datę i godzinę.." required>
+                        <input type="text" path="dueDateText" name="dueDateText" class="form-control" placeholder="Dodaj datę i godzinę.." pattern=".{19,}" required title="Wpisz datę w formacie 00/00/0000 00:00 AM">
                     </div>
-                    <p class="help-block hidden">Wpisz prawidłowy format daty: 00/00/0000 00:00 AM</p>
                     <script>
                         $(function () {
                             $('#datetimepicker1').datetimepicker();

@@ -49,8 +49,8 @@
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="text" id="name" name="name" path="name" class="form-control" placeholder="Imię" required>
                 <input type="text" id="lastName" name="lastName" path="lastName" class="form-control" placeholder="Nazwisko" required>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Adres email" required autofocus>
-                <input type="password" id="password" name ="password" path ="password" class="form-control" placeholder="Hasło" required>
+                <input type="email" id="email" name="email"  path="email" class="form-control" placeholder="Adres email"/>
+                <input type="password" id="password" name ="password" path ="password" class="form-control" placeholder="Hasło"/>
                 <div class="wrapper">
                     <div class="currency">
                 <select class="selectpicker" path="nrRoli" name="nrRoli" id="nrRoli" data-style="btn-info" style="width: 100%">

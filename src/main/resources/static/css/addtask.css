@@ -16,15 +16,15 @@
     margin:40px;
 }
 .inner-section {
-    background-color:#f96332;
+    background-color:#0D5FBD;
     width:550px;
     display:block;
     margin:20px auto;
 }
 .form{
     border-radius:8px;
-    padding-top:30px;
-    padding-bottom:30px;
+    padding-top:25px;
+    padding-bottom:25px;
     height:640px;
 }
 .h2form {
@@ -33,7 +33,7 @@
 .ulform{
     list-style-type:none;
     text-align:center;
-    margin-top:30px;
+    margin-top:25px;
 }
 .form ul.ulform >li {
     display:inline-block;
@@ -45,8 +45,8 @@
     background: #fff;
     border-radius: 50%;
     vertical-align: middle;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     text-align: center;
     margin-right: 20px;
 }
@@ -110,7 +110,7 @@ input::placeholder {
 }
 .btn-neutral,.btn-neutral:focus,.btn-neutral:hover {
     background-color: #FFFFFF;
-    color: #f96332;
+    color: #0D5FBD;
 }
 .left
 {
@@ -121,4 +121,7 @@ input::placeholder {
 {
     margin-left: 15px;
     margin-bottom:50px;
+}
+.fafa{
+    color:black;
 }

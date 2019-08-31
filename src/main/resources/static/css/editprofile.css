@@ -4,7 +4,7 @@
     padding:100px;
 }
 .stylish-form h2 {
-    color:#f96332;
+    color:#1B3061;
     margin-top:50px;
 
 }
@@ -16,16 +16,16 @@
     margin:40px;
 }
 .inner-section {
-    background-color:#f96332;
+    background-color:#1B3061;
     width:550px;
     display:block;
-    margin:100px auto;
+    margin:40px auto;
 }
 .inside-form{
     border-radius:8px;
     padding-top:30px;
     padding-bottom:30px;
-    height:600px;
+    height:700px;
 }
 .inside-form h2 {
     font-weight:700;
@@ -45,8 +45,8 @@
     background: #fff;
     border-radius: 50%;
     vertical-align: middle;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     text-align: center;
     margin-right: 20px;
 }
@@ -92,7 +92,7 @@
     color: #fff !important;
 }
 .footer {
-    margin-top:40px;
+    margin-top:15px;
     margin-bottom:40px;
 }
 input::placeholder {
@@ -111,7 +111,7 @@ input::placeholder {
 }
 .btn-neutral,.btn-neutral:focus,.btn-neutral:hover {
     background-color: #FFFFFF;
-    color: #f96332;
+    color: #1B3061;
 }
 .left
 {
@@ -120,4 +120,37 @@ input::placeholder {
 .right
 {
     margin-left: 15px;
+}
+.input-group-select
+{
+    margin-top:20px;
+}
+.input-group-select .ikona
+{
+    font-size:17px;
+    font-weight: bold;
+    color:white;
+    margin-right:20px;
+}
+.select2-results
+{
+    background-color: #324571 !important;
+    color:white;
+}
+.select2-results .select2-highlighted {
+    background-color: #1B3061 !important;
+    color:white;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #1B3061 !important;
+    color:white;
+}
+
+#id_select2_example .select2-default {
+    background-color: #324571 !important;
+    color:white;
+}
+.select2-results__option {
+    background-color: #324571 !important;
+    color:white;
 }
